@@ -4,7 +4,7 @@
     </head>
     <body>
         <h1><%= "Hello Tomcatters!! Welcome to the World of Chasers!!!" %></h1>
-        <h2><%= "Please fill the Form and send the details to respective department" %></h2>
+        <h2><%= "Please fill the Form and send the details to respective department, but no actions expected" %></h2>
         <p/>
         <div class="container">
             <form class="well form-horizontal" action=" " method="post"  id="contact_form">
