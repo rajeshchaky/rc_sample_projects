@@ -19,4 +19,13 @@ public class Calculation {
         }
         return max;
     }
+
+    public static boolean findMax3(int var1){
+        boolean flag=false;
+        int var2=3;
+        if(var1==var2){
+            flag=true;
+        }
+        return flag;
+    }
 }
