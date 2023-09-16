@@ -1,0 +1,39 @@
+pipeline{
+    agent any
+    tools {
+        maven 'maven'
+    }
+
+    stages{
+        stage('git_checkout'){
+            steps{
+                git branch: 'main', url: 'git@github.com:rajeshchaky/rc_sample_projects.git'
+            }
+        }
+        stage('maven_build'){
+            steps{
+                sh 'mvn -f BasicWebApp/pom.xml clean compile cobertura:cobertura'
+            }
+        }
+        stage('maven_test'){
+            steps{
+                sh 'mvn -f BasicWebApp/pom.xml test'
+            }
+        }
+        stage('maven_package'){
+            steps{
+                sh 'mvn -f BasicWebApp/pom.xml package'
+            }
+        }
+        stage('ansible_deployment'){
+            steps{
+            ansiblePlaybook credentialsId: 'test', disableHostKeyChecking: true, installation: 'ansible', inventory: 'BasicWebApp/dev.inv', playbook: 'BasicWebApp/ansible-test.yml'
+            }
+        }
+    }
+}
+
+def getCommitVersion(){
+    def commitHash= sh returnStdout: true, script: 'git rev-parse --short HEAD'
+    return commitHash
+}
