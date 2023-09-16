@@ -1,0 +1,25 @@
+---
+- hosts: dev
+  become: yes
+  tasks:
+   - name: repository update
+     apt:
+      name: "*"
+      state: latest
+   - name: install Jre
+     apt:
+      update_cache: yes
+      name: openjdk-11-jre-headless
+   - name: install jdk
+     apt:
+      update_cache: yes
+      name: openjdk-11-jdk-headless
+   - name: Install python pip
+     apt:
+      name: python-pip
+      state: present
+   - name: install maven
+     apt:
+      update_cache: yes
+      name: maven
+      state: latest
