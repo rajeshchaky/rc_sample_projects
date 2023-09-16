@@ -1,6 +1,7 @@
 ---
 - hosts: dev
   become: yes
+  remote_user: root
   tasks:
    - name: repository update
      apt:
