@@ -10,7 +10,7 @@
 
 ###
 
-<p align="left">✨ Detecting bugs on softwares for more than a decade now and automating applications in various technologies like UFT, Selenium with java and python and deploying them in Gitlab, Jenkins Pipelines. love to work on to the devOps roles in the organisation. occasionally I'm business Analyst too for writing requirements from client :-)</p>
+<p align="left">✨ Detecting bugs on softwares for more than a decade now and automating applications in various technologies like UFT, Selenium with java and python and deploying them in Gitlab, Jenkins Pipelines. love to work on to the DevOps roles in the organisation. Occasionally, I'm business Analyst too for writing requirements from client :-)</p>
 
 ###
 
